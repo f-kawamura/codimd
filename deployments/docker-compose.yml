@@ -19,7 +19,7 @@ services:
     #   context: ..
     #   dockerfile: ./deployments/Dockerfile
     environment:
-      - CMD_DB_URL=postgres://codimd:change_password@database/codimd
+      - CMD_DB_URL=postgres://codimd:change_password@clfcdwie400fdr59siof9gp44-database/codimd
       - CMD_USECDN=false
     depends_on:
       - database
