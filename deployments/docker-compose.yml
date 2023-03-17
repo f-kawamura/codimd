@@ -1,14 +1,14 @@
 version: "3"
 services:
-  database:
-    image: postgres:11.6-alpine
-    environment:
-      - POSTGRES_USER=codimd
-      - POSTGRES_PASSWORD=change_password
-      - POSTGRES_DB=codimd
-    volumes:
-      - "database-data:/var/lib/postgresql/data"
-    restart: always
+  #database:
+  #  image: postgres:11.6-alpine
+  #  environment:
+  #    - POSTGRES_USER=codimd
+  #    - POSTGRES_PASSWORD=change_password
+  #    - POSTGRES_DB=codimd
+  #  volumes:
+  #    - "database-data:/var/lib/postgresql/data"
+  #  restart: always
   codimd:
     # you can use image or custom build below,
     # if you need CJK character with exported PDF files,
@@ -19,7 +19,7 @@ services:
     #   context: ..
     #   dockerfile: ./deployments/Dockerfile
     environment:
-      - CMD_DB_URL=postgres://codimd:change_password@clfcdwie400fdr59siof9gp44-database/codimd
+      - CMD_DB_URL=mysql://labol_md_user:labol_md_password!@cles77s94008gr59ss1cr7buh:3306/labol_md
       - CMD_USECDN=false
     depends_on:
       - database
