@@ -24,7 +24,7 @@ services:
     depends_on:
       - database
     ports:
-      - "3000:3000"
+      - "7777:3000"
     volumes:
       - upload-data:/home/hackmd/app/public/uploads
     restart: always
